@@ -33,3 +33,7 @@ prestashopLanguage: "es"
 ##
 allowEmptyPassword: true
 ## @param command Override default container command (useful when using custom images)
+service:
+  ## @param service.type Kubernetes Service type
+  ##
+  type: NodePort
