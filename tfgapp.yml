@@ -14,12 +14,12 @@ spec:
     - repoURL: https://github.com/Vkius/apptfg.git
       targetRevision: main
       ref: main_repository
-    - repoURL: oci://registry-1.docker.io/bitnamicharts/
+    - repoURL: https://charts.bitnami.com/bitnami
       chart: prestashop
       targetRevision: 20.5.2
       helm:
         version: v3
-        releaseName: 20.5.2
+        releaseName: Version1
         passCredentials: true
         valueFiles:
           - values.yaml
