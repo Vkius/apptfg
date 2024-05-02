@@ -19,7 +19,7 @@ spec:
       targetRevision: 20.5.2
       helm:
         version: v3
-        releaseName: Version1
+        releaseName: prestashop
         passCredentials: true
         valueFiles:
           - values.yaml
