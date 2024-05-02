@@ -1,0 +1,23 @@
+kind: AppProject
+apiVersion: argoproj.io/v1alpha1
+metadata:
+    name: "tfgapp"
+    namespace: argocd
+spec:
+    destinations:
+    - namespace: "*"
+      server: "https://kubernetes.default.svc"  
+    sourceNamespaces:
+    - "*"
+    sourceRepos:
+    - "*"
+    clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+    roles:
+  # A role which provides sync privileges to only the guestbook-dev application, e.g. to provide
+  # sync privileges to a CI system
+      - name: ci-role
+        description: Sync privileges for tennat1 stage
+        policies:
+          - p, proj:tfgapp:ci-role, applications, sync, tfgapp, allow

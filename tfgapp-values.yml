@@ -1,0 +1,35 @@
+prestashopUsername: admin@vanesaquesada.es
+## @param prestashopPassword Application password
+## Defaults to a random 10-character alphanumeric string if not set
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopPassword: "mipassword1234"
+## @param prestashopEmail Admin email
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopEmail: vanesa@vanesaquesada.es
+## @param prestashopFirstName First Name
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopFirstName: Vanesa
+## @param prestashopLastName Last Name
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopLastName: Quesada
+## @param prestashopCookieCheckIP Whether to check the cookie's IP address or not
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopCookieCheckIP: "no"
+## @param prestashopCountry Default country of the store
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopCountry: "es"
+## @param prestashopLanguage Default language of the store (ISO code)
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#configuration
+##
+prestashopLanguage: "es"
+## @param allowEmptyPassword Allow DB blank passwords
+## ref: https://github.com/bitnami/containers/tree/main/bitnami/prestashop#environment-variables
+##
+allowEmptyPassword: true
+## @param command Override default container command (useful when using custom images)

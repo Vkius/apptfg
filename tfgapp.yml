@@ -1,0 +1,37 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: tfgapp-v1
+  namespace: argocd
+spec:
+  project: tfgapp
+  source:
+    repoURL: https://github.com/Vkius/apptfg.git
+    path: "."
+    targetRevision: main
+    ref: main_repository   
+  sources:
+    - repoURL: https://github.com/Vkius/apptfg.git
+      targetRevision: main
+      ref: main_repository
+    - repoURL: oci://registry-1.docker.io/bitnamicharts/
+      chart: prestashop
+      targetRevision: 20.5.2
+      helm:
+        version: v3
+        releaseName: 20.5.2
+        passCredentials: true
+        valueFiles:
+          - values.yaml
+          - $main_repository/tfgapp-values.yml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: tfgapp-v1
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+  revisionHistoryLimit: 5
