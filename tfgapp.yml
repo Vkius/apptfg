@@ -15,11 +15,11 @@ spec:
       targetRevision: main
       ref: main_repository
     - repoURL: https://charts.bitnami.com/bitnami
-      chart: apache
-      targetRevision: 11.0.2
+      chart: nginx
+      targetRevision: 16.0.6
       helm:
         version: v3
-        releaseName: apache
+        releaseName: nginx
         passCredentials: true
         valueFiles:
           - values.yaml
