@@ -1,4 +1,4 @@
-cloneHtdocsFromGit:
+cloneStaticSiteFromGit:
   enabled: true
   repository: "https://github.com/Vkius/website.git"
   branch: "pruebas"
