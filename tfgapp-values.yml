@@ -2,7 +2,7 @@ cloneHtdocsFromGit:
   enabled: true
   repository: "https://github.com/Vkius/website.git"
   branch: "pruebas"
-  enableAutoRefresh: true
+  enableAutoRefresh: false
   interval: 60
   resourcesPreset: "nano"
 service:
