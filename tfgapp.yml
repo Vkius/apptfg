@@ -15,11 +15,11 @@ spec:
       targetRevision: main
       ref: main_repository
     - repoURL: https://charts.bitnami.com/bitnami
-      chart: prestashop
-      targetRevision: 20.5.2
+      chart: apache
+      targetRevision: 11.0.2
       helm:
         version: v3
-        releaseName: prestashop
+        releaseName: apache
         passCredentials: true
         valueFiles:
           - values.yaml
