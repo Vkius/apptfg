@@ -5,3 +5,7 @@ cloneHtdocsFromGit:
   enableAutoRefresh: true
   interval: 60
   resourcesPreset: "nano"
+service:
+  ## @param service.type Apache Service type
+  ##
+  type: NodePort
