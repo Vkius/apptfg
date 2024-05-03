@@ -11,4 +11,4 @@ service:
   type: NodePort
   ports:
     http: 8080
-    https: 80443
+    https: 8443
