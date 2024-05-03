@@ -1,7 +1,7 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: tfgapp-v1
+  name: tfgapp-n1
   namespace: argocd
 spec:
   project: tfgapp
