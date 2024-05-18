@@ -1,7 +1,7 @@
 cloneStaticSiteFromGit:
-  enabled: true
+  enabled: false
   repository: "https://github.com/Vkius/website.git"
-  branch: "pruebas"
+  branch: "main"
   enableAutoRefresh: false
   interval: 60
   resourcesPreset: "nano"
