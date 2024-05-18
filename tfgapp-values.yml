@@ -5,6 +5,10 @@ cloneStaticSiteFromGit:
   enableAutoRefresh: false
   interval: 60
   resourcesPreset: "nano"
+image:
+  registry: docker.io
+  repository: bitnami/nginx
+  tag: 1.26.0-debian-12-r1
 service:
   ## @param service.type Apache Service type
   ##
